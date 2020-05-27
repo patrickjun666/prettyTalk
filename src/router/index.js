@@ -6,9 +6,24 @@ Vue.use(VueRouter)
 
   const routes = [
   {
-    path: '/',
+    path: '',
     redirect: '/home',
-    component: () => import('../views/home.vue')
+  },
+  {
+    path: '/home',
+    component: () => import('views/home.vue')
+  },
+  {
+    path: '/calendar',
+    component: () => import('views/calendar/calendar.vue')
+  },
+  {
+    path: '/lock',
+    component: () => import('views/lock/lock.vue')
+  },
+  {
+    path: '/account',
+    component: () => import('views/calendar/calendar.vue')
   },
 ]
 

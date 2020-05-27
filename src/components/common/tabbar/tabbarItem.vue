@@ -1,9 +1,12 @@
 <template>
-  <div id="tabarItem">
-    <div>
+  <div id="tabarItem" @click="activeChange">
+    <div v-if="!isActive">
       <slot name="item-icon" ></slot>
     </div>
-    <div>
+    <div v-else>
+      <slot name="active-icon"></slot>
+    </div>
+    <div :style="activeStyle">
     <slot name="item-text"></slot>
     </div>
   </div>
@@ -12,9 +15,30 @@
 <script>
 export default {
   name: 'tabbarItem',
+  props: {
+    path: String,
+    activeColor: {
+      type: String,
+      default: 'deeppink'
+    }
+  },
   data(){
     return{
-
+    }
+  },
+  methods:{
+    activeChange(){
+      this.$router.replace(this.path).catch(err => {
+        
+      })
+    }
+  },
+  computed: {
+    isActive(){
+      return this.$route.path.indexOf(this.path) !== -1;
+    },
+    activeStyle(){
+      return this.isActive?{color: this.activeColor} : {} 
     }
   }
 }
