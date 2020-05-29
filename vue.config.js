@@ -1,5 +1,8 @@
+
+const path = require('path')
+const resolve = dir => path.join(__dirname, dir)
 module.exports = {
-  configureWebpack: config => {
+  chainWebpack: config => {
     // 设置快捷路径，@表示'src'
     config.resolve.alias
     .set('@', resolve('src'))
