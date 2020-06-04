@@ -24,5 +24,6 @@ export default {
   display: flex;
   background-color: #f6f6f6;
   box-shadow: 0 -1px 1px rgba(120, 120, 120, 0.2);
+  z-index: 99;
 }
 </style>
