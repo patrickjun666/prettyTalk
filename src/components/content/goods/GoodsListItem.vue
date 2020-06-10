@@ -21,7 +21,6 @@ props: {
   }
 },
 created () {
-  console.log(this.goodsItem);
 }
 }
 </script>
