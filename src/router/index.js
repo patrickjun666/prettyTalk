@@ -25,6 +25,10 @@ Vue.use(VueRouter)
     path: '/account',
     component: () => import('views/calendar/calendar.vue')
   },
+  {
+    path: '/detail/:iid',
+    component: () => import('views/detail/detail.vue')
+  }
 ]
 
 const router = new VueRouter({

@@ -18,8 +18,8 @@ export default {
 <style scoped>
   #backtop {
     position: fixed;
-    right: 10px;
-    bottom: 55px;
+    right: 15px;
+    bottom: 60px;
   }
   #backtop img {
     width: 43px;
